@@ -39,7 +39,7 @@ import CoreGraphics
 
 extension CGImage {
   static func from(data: Data) -> CGImage? {
-    #if os(iOS)
+    #if os(iOS) || os(visionOS)
     return UIImage(data: data)?.cgImage
     #elseif os(macOS)
     guard let image = NSImage(data: data) else { return nil }

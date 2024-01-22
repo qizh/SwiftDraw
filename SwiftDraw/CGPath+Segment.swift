@@ -34,7 +34,7 @@ import CoreText
 import Foundation
 #if os(macOS)
 import AppKit
-#elseif os(iOS)
+#elseif os(iOS) || os(visionOS)
 import UIKit
 #endif
 

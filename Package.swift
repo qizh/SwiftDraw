@@ -1,15 +1,17 @@
-// swift-tools-version:5.7
+// swift-tools-version: 5.9
 
 import PackageDescription
 
 let package = Package(
     name: "SwiftDraw",
 	  platforms: [
-        .iOS(.v12), .macOS(.v10_14)
+        .iOS(.v12), 
+		.macOS(.v10_14),
+		.visionOS(.v1),
     ],
     products: [
         // Products define the executables and libraries produced by a package, and make them visible to other packages.
-        .executable(name: "swiftdraw", targets: ["CommandLine"]),
+        // .executable(name: "swiftdraw", targets: ["CommandLine"]),
 		.library(
             name: "SwiftDraw",
             targets: ["SwiftDraw"]),
@@ -21,11 +23,13 @@ let package = Package(
             dependencies: [],
 			path: "SwiftDraw"
 		),
+		/*
         .executableTarget(
             name: "CommandLine",
             dependencies: ["SwiftDraw"],
             path: "CommandLine"
 		),
+		*/
         .testTarget(
             name: "SwiftDrawTests",
             dependencies: ["SwiftDraw"],
