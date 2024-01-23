@@ -5,7 +5,7 @@ import PackageDescription
 let package = Package(
     name: "SwiftDraw",
 	  platforms: [
-        .iOS(.v12), 
+        .iOS(.v13),
 		.macOS(.v10_14),
 		.visionOS(.v1),
     ],
